@@ -201,7 +201,7 @@ return {
       eslint = {},
       bashls = {},
       marksman = {},
-      -- clangd = {},
+      clangd = {},
       -- gopls = {},
       -- pyright = {},
       -- rust_analyzer = {},
