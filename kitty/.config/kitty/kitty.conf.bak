@@ -1,7 +1,10 @@
-font_family FiraCode Nerd Font
-# font_family CaskaydiaCove Nerd Font Mono
+# font_family FiraCode Nerd Font
+font_family CaskaydiaCove Nerd Font Mono
 
 font_size 11.2
+modify_font cell_height 2px
+
+cursor_trail 1
 
 # Window Padding
 window_padding_width 10 10
@@ -11,6 +14,6 @@ background_opacity 0.85
 # background_opacity 1
 
 # BEGIN_KITTY_THEME
-# Kanagawa
+# Catppuccin-Mocha
 include current-theme.conf
 # END_KITTY_THEME

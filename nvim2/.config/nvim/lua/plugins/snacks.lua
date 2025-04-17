@@ -9,7 +9,10 @@ return {
     -- refer to the configuration section below
     bigfile = { enabled = true },
     dashboard = { enabled = true },
-    indent = { enabled = true },
+    indent = {
+      enabled = false,
+      only_scope = true,
+    },
     input = { enabled = true },
     picker = { enabled = true },
     notifier = { enabled = true },

@@ -39,7 +39,10 @@ return {
     },
 
     -- (Default) Only show the documentation popup when manually triggered
-    completion = { documentation = { auto_show = true } },
+    completion = {
+      documentation = { auto_show = true },
+      ghost_text = { enabled = true },
+    },
     signature = { enabled = true },
 
     -- Default list of enabled providers defined so that you can extend it
