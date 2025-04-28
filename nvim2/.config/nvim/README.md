@@ -22,5 +22,13 @@
 - [x] nvim-lspconfig
 - [x] dressing.nvim
 - [x] conform.nvim
-- [ ] blink-cmp
+- [x] blink-cmp
 - [ ] snacks.indent
+
+## Extras
+
+### Markdown
+
+- [x] markdown-preview
+- [x] live-preview
+- [x] render-markdown

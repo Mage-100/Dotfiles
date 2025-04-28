@@ -10,7 +10,7 @@ return {
     require("ibl").setup({
       scope = {
         enabled = true, -- turn on scope-based indent guides
-        show_start = true, -- underline the first indent of the scope
+        show_start = false, -- underline the first indent of the scope
         -- highlight = { -- list of highlight groups to cycle through
         --   "IndentBlanklineContextChar",
         --   "IndentBlanklineContextStart",

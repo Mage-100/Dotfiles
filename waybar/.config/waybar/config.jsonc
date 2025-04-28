@@ -1,0 +1,66 @@
+{
+  "position": "top",
+  "reload_style_on_change": true,
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    // "hyprland/window"
+    "clock"
+  ],
+  "modules-right": [
+    // "network",
+    // "pulseaudio",
+    "cpu"
+    // "battery"
+  ],
+  "clock": {
+    "format": "{:%a %d %H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-warning": "{icon}  {capacity}%",
+    "format-critical": "{icon}  {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon}  {time}",
+    "format-full": "  {capacity}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "tooltip-format": "{time}"
+  },
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": "󰤭  Disconnected",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "  Disconnected",
+    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        " "
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+  "cpu": {
+    "interval": 2.5,
+    "format": "{icon}{usage}%",
+    "format-icons": "<span size='13pt'> </span> "
+  }
+}
