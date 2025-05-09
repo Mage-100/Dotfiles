@@ -43,4 +43,3 @@ vim.opt.splitbelow = true
 
 -- Minimal number of screen lines to keep above and below the cursor
 -- vim.opts.scrolloff = 10
-
