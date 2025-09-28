@@ -13,8 +13,10 @@ window_padding_width 10 10
 background_opacity 0.85
 # background_opacity 1
 
+# shell zsh
+
 # BEGIN_KITTY_THEME
-# Catppuccin-Mocha
+# Kanagawa
 include current-theme.conf
 # END_KITTY_THEME
 
@@ -22,6 +24,7 @@ include current-theme.conf
 # BEGIN_KITTY_FONTS
 font_family      family="JetBrainsMono Nerd Font"
 bold_font        auto
+bold_font        JetBrainsMono Nerd Font:weight=Regular
 italic_font      auto
 bold_italic_font auto
 # END_KITTY_FONTS
