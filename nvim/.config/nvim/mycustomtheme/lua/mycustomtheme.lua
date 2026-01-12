@@ -2,25 +2,21 @@ vim.g.colors_name = "mycustomtheme"
 vim.opt.termguicolors = true
 local M = {}
 
-local palette = {
-	black_olive = "#1f271b",
-	onyx = "#3C3C3B",
-	licorice = "#171219",
-}
--- #282C34 dark slate balck
 function M.apply()
 	local highlights = {
-		Normal = { fg = "#FFFFF7", bg = "#2e3030", bold = false },
+		Normal = { fg = "#F2F2F2", bg = "#272E2E", bold = false },
 		LineNr = { fg = "gray" },
-		CursorLineNr = { fg = "orange" },
+		CursorLineNr = { fg = "#4BBEFF"},
 		["@function"] = { fg = "#dddddd", bold = false },
-		["@keyword"] = { fg = "#CBCBCB", bold = false },
-		["@string"] = { fg = "#b6d5b6" },
-		["@variable"] = { fg = "#f1c232" },
-		["@variable.member"] = { fg = "red" },
-		["@type"] = { fg = "fg", bold = true },
-		["@type.builtin"] = { fg = "fg", bold = true },
+		["@keyword"] = { fg = "#F2F2F2", bold = false },
+		["@keyword.modifier"] = { fg = "#FEF1A0", bold=true },
+		["@keyword.import"] = { fg = "grey" },
+		["@type.builtin"] = { fg = "#FEF1A0" },
+		["@string"] = { fg = "#67d66e" },
+		["@variable"] = { fg = "#ffb83c", bold=false },
 		["@property"] = { fg = "fg" },
+		["@punctuation.bracket"] = { fg = "fg" },
+		["@punctuation.delimiter"] = { fg = "#ff4b8f" },
 	}
 
 	for groups, opts in pairs(highlights) do

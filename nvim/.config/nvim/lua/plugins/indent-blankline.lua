@@ -1,22 +1,44 @@
 return {
   "lukas-reineke/indent-blankline.nvim",
+  enabled=false,
   main = "ibl",
-  ---@module "ibl"
-  ---@type ibl.config
-  config = function()
-    -- vim.api.nvim_set_hl(0, "IndentBlanklineContextChar", { fg = "#FFD700", nocombine = true })
-    -- vim.api.nvim_set_hl(0, "IndentBlanklineContextStart", { fg = "#FF4500", underline = true })
+  opts = function()
+    local hooks = require("ibl.hooks")
 
-    require("ibl").setup({
-      scope = {
-        enabled = true, -- turn on scope-based indent guides
-        show_start = false, -- underline the first indent of the scope
-        -- highlight = { -- list of highlight groups to cycle through
-        --   "IndentBlanklineContextChar",
-        --   "IndentBlanklineContextStart",
-        -- },
+    hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+      -- vim.api.nvim_set_hl(0, "IblIndent", { fg = "#4b5263" })
+      -- vim.api.nvim_set_hl(0, "IblScope", { fg = "#61afef", bold = true })
+      vim.api.nvim_set_hl(0, "IblIndent", { fg = "#3B3B3B" })
+      vim.api.nvim_set_hl(0, "IblScope", { fg = "#3B3B3B", bold = false })
+    end)
+
+    return {
+      indent = {
+        char = ".",
+        highlight = "IblIndent"
       },
-      -- use_treesitter = true,
-    })
+      scope = {
+        enabled = true,
+        show_start = false,
+        show_end = false,
+        char = ".",
+        highlight = "IblScope"
+      },
+      whitespace = {
+        remove_blankline_trail = true,
+      },
+      exclude = {
+        filetypes = {
+          "help",
+          "terminal",
+          "dashboard",
+          "lazy",
+          "mason",
+          "NvimTree",
+          "neo-tree",
+          "TelescopePrompt",
+        },
+      },
+    }
   end,
 }
