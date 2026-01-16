@@ -10,13 +10,12 @@ function M.apply()
 		["@function"] = { fg = "#dddddd", bold = false },
 		["@keyword"] = { fg = "#F2F2F2", bold = false },
 		["@keyword.modifier"] = { fg = "#FEF1A0", bold=true },
-		["@keyword.import"] = { fg = "grey" },
+		["@keyword.import"] = { fg = "fg" },
 		["@type.builtin"] = { fg = "#FEF1A0" },
 		["@string"] = { fg = "#67d66e" },
 		["@variable"] = { fg = "#ffb83c", bold=false },
 		["@property"] = { fg = "fg" },
 		["@punctuation.bracket"] = { fg = "fg" },
-		["@punctuation.delimiter"] = { fg = "#ff4b8f" },
 	}
 
 	for groups, opts in pairs(highlights) do
